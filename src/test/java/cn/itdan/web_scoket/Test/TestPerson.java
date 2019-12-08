@@ -31,7 +31,6 @@ public class TestPerson {
                         CodecRegistries.fromProviders(PojoCodecProvider.builder().automatic(true).build())
                 );
         // 建立连接
-        MongoClient mongoClient = MongoClients.create("mongodb://admin:admin@123.57.128.124:27017/admin");
         // 选择数据库 并且 注册解码器
         MongoDatabase mongoDatabase = mongoClient.getDatabase("admin")
                 .withCodecRegistry(pojoCodecRegistry);

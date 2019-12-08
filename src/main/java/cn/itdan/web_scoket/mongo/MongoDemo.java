@@ -14,7 +14,6 @@ public class MongoDemo {
 
     public static void main(String [] args){
      //获取mongo链接
-        MongoClient mongoClients=MongoClients.create("mongodb://admin:admin@123.57.128.124:27017/admin");
         MongoDatabase mongoDatabase= mongoClients.getDatabase("admin");
         MongoCollection<Document> mongoCollection= mongoDatabase.getCollection("'user");
         mongoCollection.find().forEach((Consumer<? super Document>) document ->{

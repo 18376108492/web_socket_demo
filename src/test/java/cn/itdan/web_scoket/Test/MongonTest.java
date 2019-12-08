@@ -24,7 +24,6 @@ public class MongonTest {
     @Before
     public void init() {
         //获取mongo链接
-        com.mongodb.client.MongoClient mongoClients = MongoClients.create("mongodb://admin:admin@123.57.128.124:27017/admin");
         MongoDatabase mongoDatabase = mongoClients.getDatabase("admin");
         mongoCollection = mongoDatabase.getCollection("admin");
     }
